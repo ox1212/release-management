@@ -1,0 +1,51 @@
+{
+  "name": "release-management-plugin",
+  "version": "0.1.0-beta.1",
+  "description": "Reusable CI/CD plugin for Release Management and Semantic Versioning across monorepos and single-app repos.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "release-management": "bin/release-management.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:all": "node --test test/*.test.js && node demo.mjs",
+    "start": "node bin/release-management.mjs",
+    "dev": "node demo.mjs",
+    "lint": "echo 'No lint script configured'",
+    "publish-beta": "npm version prerelease --preid=beta && npm publish --tag beta",
+    "publish": "npm publish",
+    "prepare": "husky install",
+    "build": "echo 'No build step - pure JS module'"
+  },
+  "keywords": [
+    "semantic-release",
+    "release-management",
+    "ci-cd",
+    "monorepo",
+    "versioning",
+    "github-actions",
+    "devops"
+  ],
+  "author": "DevOps CI/CD Agent",
+  "license": "MIT",
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-org/release-management-plugin.git"
+  },
+  "homepage": "https://github.com/tu-org/release-management-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/tu-org/release-management-plugin/issues"
+  },
+  "devDependencies": {}
+}
